@@ -1,2 +1,2 @@
 # workflows
-In class assignmanets 
+In class assignments 

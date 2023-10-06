@@ -10,8 +10,8 @@ def test_my_adder():
 
 # Test my_thermo_stat function
 def test_my_thermo_stat():
-    assert my_thermo_stat(70, 75) == 'Heat'
-    assert my_thermo_stat(80, 75) == 'AC'
+    assert my_thermo_stat(70, 79) == 'Heat'
+    assert my_thermo_stat(83, 75) == 'AC'
 
 # Test have_digits function
 def test_have_digits():

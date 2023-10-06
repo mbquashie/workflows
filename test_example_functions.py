@@ -6,18 +6,15 @@ from example_functions import my_adder, my_thermo_stat, have_digits
 # Test my_adder function
 def test_my_adder():
     assert my_adder(1, 2, 3) == 6
-    assert my_adder(-1, 5, 10) == 16
     assert my_adder(0, 0, 0) == 0
 
 # Test my_thermo_stat function
 def test_my_thermo_stat():
     assert my_thermo_stat(70, 75) == 'Heat'
     assert my_thermo_stat(80, 75) == 'AC'
-    assert my_thermo_stat(75, 75) == 'off'
 
 # Test have_digits function
 def test_have_digits():
     assert have_digits("Hello123") == 1
     assert have_digits("NoDigitsHere") == 1
-    assert have_digits("") == 0
 

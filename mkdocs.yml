@@ -1,0 +1,14 @@
+site_name: Functions
+site_url: https://mbquashie.github.com/
+nav:
+  - Home: index.md
+  - About: about.md
+  - Perimeter: Perimeter.md
+  - Area: Area.md
+  - Thermostat: Thermostat.md
+  - Adder: Adder.md
+  - Digits: Digits.md
+theme:
+    name: simple-blog
+plugins:
+    - mkdocstrings

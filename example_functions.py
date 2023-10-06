@@ -4,20 +4,21 @@
 def my_adder(a, b, c):
     """
     Calculate the sum of three numbers.
-
-    Parameters:
-    a (int or float): The first number.
-    b (int or float): The second number.
-    c (int or float): The third number.
+    This function takes three numbers as input (a,b,c) and returns the the sum.
+    
+    Args:
+        a (int or float): The first number.
+        b (int or float): The second number.
+        c (int or float): The third number.
 
     Returns:
-    int or float: The sum of a, b, and c.
+         out (int or float): The sum of a, b, and c.
     
-    Example usage:
-    --------------
-    # Example: Calculate the sum of 1, 2, and 3
-    result = my_adder(1, 2, 3)
-    print(f"Sum: {result}")  # Output: Sum: 6
+    Examples:
+       >>> my_adder(1, 2, 3)
+       6
+       >>> my_adder(1.2, 3.1, 0.5)
+       4.9
     """
     
     # Calculate the summation
@@ -28,59 +29,52 @@ def my_adder(a, b, c):
 
 def my_thermo_stat(temp, desired_temp):
     """
-    Determine the thermostat status based on the current temperature and desired temperature.
+    Adjusts the thermostat status based on the current temperature and desired temperature.
 
-    Parameters:
-    temp (int): The current temperature.
-    desired_temp (int): The desired temperature.
+    This function determines the appropriate thermostat status (Heat, AC, or Off)
+    based on the temperature and desired temperature settings.
+
+    Args:
+        temp (int): The current temperature in degrees Fahrenheit.
+        desired_temp (int): The desired temperature in degrees Fahrenheit.
 
     Returns:
-    str: The thermostat status, which can be 'Heat', 'AC', or 'off'.
-    
-    Example usage:
-    --------------
-    # Example 1: It's colder than desired_temp - 5, so the status is 'Heat'
-    status = my_thermo_stat(65, 70)
-    print(f"Thermostat Status: {status}")  # Output: Thermostat Status: Heat
+        str: The thermostat status, which can be 'Heat' (if temp is significantly lower
+             than desired_temp), 'AC' (if temp is significantly higher than desired_temp),
+             or 'Off' (if the current temperature is within 5 degrees of the desired temperature).
 
-    # Example 2: It's hotter than desired_temp + 5, so the status is 'AC'
-    status = my_thermo_stat(80, 72)
-    print(f"Thermostat Status: {status}")  # Output: Thermostat Status: AC
-
-    # Example 3: It's within the desired temperature range, so the status is 'off'
-    status = my_thermo_stat(72, 72)
-    print(f"Thermostat Status: {status}")  # Output: Thermostat Status: off
+    Examples:
+        >>> my_thermo_stat(70, 75)
+        'Heat'
+        >>> my_thermo_stat(80, 75)
+        'AC'
+        >>> my_thermo_stat(74, 75)
+        'Off'
     """
-    
     if temp < desired_temp - 5:
         status = 'Heat'
     elif temp > desired_temp + 5:
         status = 'AC'
     else:
-        status = 'off'
-    
+        status = 'Off'
     return status
 
 
 def have_digits(s):
     """
-    Check if a string contains digits.
+    This function checks if a string contains digits.
 
-    Parameters:
-    s (str): The input string to check.
+    Args:
+        s (str): The input string to check.
 
     Returns:
-    int: 1 if the string contains digits, 0 otherwise.
+           int: 1 if the string contains digits, 0 otherwise.
     
-    Example usage:
-    --------------
-    # Example 1: Check if the string contains digits
-    contains_digits = have_digits("Hello123")
-    print(f"Contains Digits: {contains_digits}")  # Output: Contains Digits: 1
-
-    # Example 2: Check if the string contains digits (no digits in this case)
-    contains_digits = have_digits("HelloWorld")
-    print(f"Contains Digits: {contains_digits}")  # Output: Contains Digits: 0
+    Examples:
+        >>> have_digits("Hello123")
+        1
+        >>> have_digits("HelloWorld")
+        0
     """
     
     out = 0
@@ -93,5 +87,6 @@ def have_digits(s):
             break
             
     return out
+
 
  

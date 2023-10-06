@@ -3,38 +3,43 @@
 def area_of_rectangle(width, height):
     """
     Calculate the area of a rectangle.
-
-    Parameters:
-    width (float): The width of the rectangle.
-    height (float): The height of the rectangle.
+    
+    This function takes two numbers as input (width, height) and returns the area.
+    
+    Args:
+        width (float or int): The width of the rectangle.
+        height (float or int): The height of the rectangle.
 
     Returns:
-    float: The area of the rectangle.
-    
-    Example usage:
-    --------------
-    # Example: Calculate the area of a rectangle with width 5.0 and height 3.0
-    area = area_of_rectangle(5.0, 3.0)
-    print(f"Area: {area}")  # Output: Area: 15.0
+        float or int: The area of the rectangle.
+
+    Examples:
+        >>> area_of_rectangle(3.0, 4.0)
+        12.0
+        >>> area_of_rectangle(2.5, 6.0)
+        15.0
     """
     return width * height
+
 
 def perimeter_of_rectangle(width, height):
     """
     Calculate the perimeter of a rectangle.
-
-    Parameters:
-    width (float): The width of the rectangle.
-    height (float): The height of the rectangle.
+    
+    This function takes two numbers as input (width, height) and returns the perimeter.
+    
+    Args:
+        width (float or int): The width of the rectangle.
+        height (float or int): The height of the rectangle.
 
     Returns:
-    float: The perimeter of the rectangle.
-    
-    Example usage:
-    --------------
-    # Example: Calculate the perimeter of a rectangle with width 5.0 and height 3.0
-    perimeter = perimeter_of_rectangle(5.0, 3.0)
-    print(f"Perimeter: {perimeter}")  # Output: Perimeter: 16.0
+        float or int: The perimeter of the rectangle.
+
+    Examples:
+        >>> perimeter_of_rectangle(3.0, 4.0)
+        14.0
+        >>> perimeter_of_rectangle(2.5, 6.0)
+        17.0
     """
     return 2 * (width + height)
 

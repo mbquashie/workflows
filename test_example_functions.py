@@ -16,5 +16,5 @@ def test_my_thermo_stat():
 # Test have_digits function
 def test_have_digits():
     assert have_digits("Hello123") == 1
-    assert have_digits("NoDigitsHere") == 1
+    assert have_digits("NoDigitsHere") == 0
 
